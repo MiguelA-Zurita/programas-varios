@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            Miguel Angel Zurita Redwood
+        </title>
+        <script type="text/javascript">
+            document.write("<h2>Taula d'alumnat:</h2>");//Creando el título de la tabla
+            document.write("<table border=1 cellpadding=8 width=500 height=80>"); //Creando la tabla
+            document.write("<tr bgcolor=lightblue><th><b>NOM</b></th>"); //Cabeceras de la tabla
+            document.write("<th><b>MÒDUL</b></th>");
+            document.write("<th><b>NOTA</b></th>");
+            document.write("<th><b>AVALUACIÓ</b></th></tr>");
+            var nombre, modulo, nom_modulo, nota, alumnos, evaluacion, alumnos_apweb=0, alumnos_seg=0, notas_apweb=0, notas_seg=0, media_apweb, media_seg //Creando variables necesarias
+            alumnos=parseInt(prompt("Introduce el número de alumnos",0)); //Número de alumnos que se solicitará más tarde
+            for(i=0;i<alumnos; i++){ //Se ejecuta el for hasta que i sea igual que el número de alumnos antes introducido
+                nombre=prompt("Introduzca el nombre del alumno"); //nombre del alumno
+                modulo=prompt("Introduzca módulo (APWEB o SEG)"); //modulo del alumno
+                while(modulo!="APWEB" && modulo!="apweb" && modulo!="SEG" && modulo!="seg"){ //Bucle que comprueba el modulo 
+                    alert("El nom del mòdul és incorrecte, torni a introduir-ho");
+                    modulo=prompt("Introduzca módulo (APWEB o SEG)");
+                }
+                nota=parseInt(prompt("Introduzca su nota (Entre 0 y 10)",0)); //Pregunta nota del alumno
+                while(nota<0||nota>10){ //bucle que comprueba la nota
+                    alert("Nota errónea, introduzca de nuevo su nota");
+                    nota=parseInt(prompt("Introduzca su nota (Entre 0 y 10)",0));
+                }
+                if(nota<5){ //asignando valor a la evaluacion
+                    evaluacion="NO APTE"
+                }
+                else{
+                    evaluacion="APTE"
+                }
+                if(modulo=="APWEB" || modulo=="apweb"){ //Acumula las notas según el módulo y aumenta el número de alumnos matriculados del modulo
+                    notas_apweb=notas_apweb+nota
+                    alumnos_apweb++
+                    nom_modulo="Aplicaciones Web"
+                }
+                else{ //En caso de que no sea APWEB, es SEG, asigna el acumulador de notas, aumenta el alumnado matriculado y asigna el numero de modulo para la tabla
+                    notas_seg=notas_seg+nota
+                    alumnos_seg++
+                    nom_modulo="Seguretat Informàtica"
+                }
+                document.write("<tr><td>" + nombre + "</td>");//Introduce los datos del alumno dentro de la tabla
+                document.write("<td>"+ nom_modulo + "</td>");
+                document.write("<td>"+ nota + "</td>");
+                document.write("<td>" + evaluacion + "</td></tr>");
+            }
+            media_apweb=notas_apweb/alumnos_apweb //calcula media de apweb
+            media_seg=notas_seg/alumnos_seg //calcula media de seg
+            document.write("</table><br>");
+            document.write("<p>La mitjana de l'assignatura Aplicacions Web ha estat de: " + media_apweb + "</p>");
+            document.write("La mitjana de l'assignatura Seguretat Informàtica ha estat de: " + media_seg + "</p>");
+        </script>
+    </head>
+    <body>
+        <p>Esto está en body</p>
+    </body>
+</html>
