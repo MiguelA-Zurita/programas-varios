@@ -8,12 +8,22 @@ public class Main {
         int totalVocales = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce una frase");
-        fraseIntroducida = sc.next();       
+        fraseIntroducida = sc.next();
+        fraseIntroducida = fraseIntroducida.toLowerCase();
+        char[] letras = fraseIntroducida.toCharArray();      
         for(int i = 0; i<fraseIntroducida.length(); i++){
-            System.out.println(fraseIntroducida);
-        }
-        if (fraseIntroducida = ) {
-            totalVocales++;
+            switch(letras[i]){
+                case('a'):
+                case('e'):
+                case('i'):
+                case('o'):
+                case('u'):
+                System.out.println("La letra " + letras[i] + " es vocal");
+                break;
+            default:
+                System.out.println("la letra " + letras[i] + " es consonante");
+            }
+            
         }
         System.out.println(totalVocales);
         sc.close();
