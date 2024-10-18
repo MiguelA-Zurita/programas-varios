@@ -19,13 +19,14 @@ public class Main {
                 case('o'):
                 case('u'):
                 System.out.println("La letra " + letras[i] + " es vocal");
+                totalVocales++;
                 break;
             default:
                 System.out.println("la letra " + letras[i] + " es consonante");
             }
             
         }
-        System.out.println(totalVocales);
+        System.out.println("En total hay " + totalVocales + " vocales");
         sc.close();
     }
 }
