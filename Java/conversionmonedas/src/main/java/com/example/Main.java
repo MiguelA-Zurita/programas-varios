@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        String[] menuConversiones = {"1. Dòlars a Euros", "2. Dòlars a Pesos Mexicans","3. Euros a Dòlars","4. Euros a Pesos Mexicans", "5. Pesos Mexicans a Dòlars", "6. Pesos Mexicans a Euros", "7. Sortir"};
-        String[] monedaAConvertirAbreviada = {" EUR", " USD", " MXN"};
-        String[] monedaConvertidaAbreviada = {" EUR", " USD", " MXN"};
+        String[] menuConversiones = {"1. Dólarrs a Euros", "2. Dólares a Pesos mexicanos","3. Dólares a Yenes","4. Dólares a Libras","5. Euros a Dólares","6. Euros a Pesos mexicanos","7.Euros a Yenes","8. Euros a Libras", "9. Pesos mexicanos a Dólares", "10. Pesos mexicanos a Euros","11. Pesos mexicanos a Yenes" ,"12. Pesos mexicanos a Libras","13. Yenes a Dólares", "14. Yenes a Euros", "15. Yenes a Pesos Mexicanos" ,"16.Yenes a Libras", "17.Libras a Dólares", "18. Libras a Euros", "19. Libras a Pesos mexicanos", "20. Libras a Yenes", "21. Salir"};
+        String[] monedaAConvertirAbreviada = {" EUR", " USD", " MXN", "JPY", "GBP"};
+        String[] monedaConvertidaAbreviada = {" EUR", " USD", " MXN", "JPY", "GBP"};
         String siNo = "s";
         int opcionMenu= 0;
         int monedaConvertida = 0;
@@ -24,8 +24,22 @@ public class Main {
             System.out.println(menuConversiones[4]);
             System.out.println(menuConversiones[5]);
             System.out.println(menuConversiones[6]);
+            System.out.println(menuConversiones[7]);
+            System.out.println(menuConversiones[8]);
+            System.out.println(menuConversiones[9]);
+            System.out.println(menuConversiones[10]);
+            System.out.println(menuConversiones[11]);
+            System.out.println(menuConversiones[12]);
+            System.out.println(menuConversiones[13]);
+            System.out.println(menuConversiones[14]);
+            System.out.println(menuConversiones[15]);
+            System.out.println(menuConversiones[16]);
+            System.out.println(menuConversiones[17]);
+            System.out.println(menuConversiones[18]);
+            System.out.println(menuConversiones[19]);
+            System.out.println(menuConversiones[20]);
             opcionMenu = sc.nextInt()-1;
-            if(opcionMenu>=0 && opcionMenu<=5){
+            if(opcionMenu>=0 && opcionMenu<=19){
                 System.out.println("Has eligido: " + menuConversiones[opcionMenu]);
                 System.out.println("Introduce la cantidad que deseas convertir a la moneda escogida.");
                 cantidadAConvertir = sc.nextDouble();
@@ -46,26 +60,39 @@ public class Main {
                     monedaConvertida = 2; //MXN
                     break;
                 case(2):
+                    cantidadConvertida = cantidadAConvertir*150.75;
+                    monedaAConvertir = 1; //USD
+                    monedaConvertida = 3; //JPY
+                    break;
+                case(3):
+                    cantidadConvertida = cantidadAConvertir*0.77;
+                    monedaAConvertir= 1; //USD
+                    monedaConvertida = 4; //GBP
+                    break;
+                case(4):
                     cantidadConvertida = cantidadAConvertir*1.18;
                     monedaAConvertir = 0; //EUR
                     monedaConvertida = 1; //USD
                     break;
-                case(3):
+                case(5):
                     cantidadConvertida = cantidadAConvertir*23.50;
                     monedaAConvertir = 0; //EUR
                     monedaConvertida = 2; //MXN
                     break;
-                case(4):
+                case(6):
+                    cantidadConvertida = cantidadAConvertir*163.
+                case(9):
                     cantidadConvertida = cantidadAConvertir*0.05;
                     monedaAConvertir = 2; //MXN
                     monedaConvertida = 1; //USD
                     break;
-                case(5):
+                case(10):
                     cantidadConvertida = cantidadAConvertir*0.042;
                     monedaAConvertir = 2; //MXN
                     monedaConvertida = 0; //EUR
                     break;
-                case(6):
+                    
+                case(20):
                     salir = true;
                     break;
                 default:
