@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activitat2.5</title>
-</head>
-<body>
-    <h1>
-        Formulario
-    </h1>
-    <form>
-        <fieldset>
-            <legend>Datos personales</legend>
-            <p><label>Nombre</label> <input type="text" name="Nombre" placeholder="Nombre" required></p>
-            <p><label>Edad</label> <input type="number" name="Edad" placeholder="Edad" maxlength="3" minlength="2" min="18"></p>
-            <p><label>Correo electrónico</label> <input type="email" name="Correo" placeholder="Correo electrónico" required></p>
-            <p><label>Contraseña</label> <input type="password" name="Contraseña" placeholder="Contraseña" minlength="6" maxlength="12" required></p>
-        </fieldset>
-        <p>
-           <label>
-                Consola favorita:
-            </label>
-            <Select name="Consola" multiple>
-                <option value="Nintendo switch">Nintendo switch</option>
-                <option value="PS5">PS5</option>
-                <option value="Xbox Series S">Xbox Series S</option>
-                <option value="Xbox Series X">Xbox Series X</option>
-                <option value="Steam Deck">Steam Deck</option>
-                <option value="Otros">Otros</option>
-            </Select>
-        </p>
-        <p><input type="checkbox" name="newsletter"> Deseo subscribirme a la newsletter y recibir ofertas a través de correo electrónico</p>
-        <p><label>Comentarios</label> <textarea name="Comentarios" cols="50" rows="7" placeholder="Comentarios"></textarea></p>
-        <p><input type="submit" name="Enviar" placeholder="Enviar"></p>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Activitat2.5</title>
+    </head>
+    <body>
+        <h1>
+            Formulario
+        </h1>
+        <form>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <p><label>Nombre</label> <input type="text" name="Nombre" placeholder="Nombre" required></p>
+                <p><label>Edad</label> <input type="number" name="Edad" placeholder="Edad" maxlength="3" minlength="2" min="18"></p>
+                <p><label>Correo electrónico</label> <input type="email" name="Correo" placeholder="Correo electrónico" required></p>
+                <p><label>Contraseña</label> <input type="password" name="Contraseña" placeholder="Contraseña" minlength="6" maxlength="12" required></p>
+            </fieldset>
+            <p>
+                <label>
+                    Consola favorita:
+                </label>
+            </p>
+            <p>
+                <Select name="Consola" multiple>
+                    <option value="Nintendo switch">Nintendo switch</option>
+                    <option value="PS5">PS5</option>
+                    <option value="Xbox Series S">Xbox Series S</option>
+                    <option value="Xbox Series X">Xbox Series X</option>
+                    <option value="Steam Deck">Steam Deck</option>
+                    <option value="Otros">Otros</option>
+                </Select>
+            </p>
+            <p><input type="checkbox" name="newsletter"> Deseo subscribirme a la newsletter y recibir ofertas a través de correo electrónico</p>
+            <p><label>Comentarios:</p></label> <p><textarea name="Comentarios" cols="50" rows="7" placeholder="Comentarios"></textarea></p>
+            <p><input type="submit" name="Enviar" placeholder="Enviar"></p>
+        </form>
+    </body>
 </html>
