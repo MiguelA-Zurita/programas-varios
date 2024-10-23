@@ -10,7 +10,7 @@ public class Main {
                 "8. Euros a Libras", "9. Pesos mexicanos a Dólares", "10. Pesos mexicanos a Euros",
                 "11. Pesos mexicanos a Yenes", "12. Pesos mexicanos a Libras", "13. Yenes a Dólares",
                 "14. Yenes a Euros", "15. Yenes a Pesos Mexicanos", "16. Yenes a Libras", "17. Libras a Dólares",
-                "18. Libras a Euros", "19. Libras a Pesos mexicanos", "20. Libras a Yenes", "21. Salir" };
+                "18. Libras a Euros", "19. Libras a Pesos mexicanos", "20. Libras a Yenes", "21. Salir" }; //Array con todas las opciones disponibles
         String[] monedaAConvertirAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" };
         String[] monedaConvertidaAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" };
         String siNo = "s";
@@ -22,27 +22,9 @@ public class Main {
         double cantidadConvertida = 0.0d;
         do {
             System.out.println("Elige de las siguientes opciones:");
-            System.out.println(menuConversiones[0]);
-            System.out.println(menuConversiones[1]);
-            System.out.println(menuConversiones[2]);
-            System.out.println(menuConversiones[3]);
-            System.out.println(menuConversiones[4]);
-            System.out.println(menuConversiones[5]);
-            System.out.println(menuConversiones[6]);
-            System.out.println(menuConversiones[7]);
-            System.out.println(menuConversiones[8]);
-            System.out.println(menuConversiones[9]);
-            System.out.println(menuConversiones[10]);
-            System.out.println(menuConversiones[11]);
-            System.out.println(menuConversiones[12]);
-            System.out.println(menuConversiones[13]);
-            System.out.println(menuConversiones[14]);
-            System.out.println(menuConversiones[15]);
-            System.out.println(menuConversiones[16]);
-            System.out.println(menuConversiones[17]);
-            System.out.println(menuConversiones[18]);
-            System.out.println(menuConversiones[19]);
-            System.out.println(menuConversiones[20]);
+            for( int i = 0; i < menuConversiones.length; i++){
+                System.out.println(menuConversiones[i]);
+            }
             opcionMenu = sc.nextInt() - 1;
             if (opcionMenu >= 0 && opcionMenu <= 19) {
                 System.out.println("Has eligido: " + menuConversiones[opcionMenu]);

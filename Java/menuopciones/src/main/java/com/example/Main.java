@@ -64,12 +64,14 @@ public class Main {
                     i = i-1;
             }
             if(!salir && opcionMenu<=9 && opcionMenu>=5 && i<5){ //Condicional que se ejecuta mientras haya escogido una opción válida del menú, no haya decidido salir y tampoco haya acabado todas las operaciones
-            System.out.println("Deseas continuar operando? s/n");
-            siNo = sc.next().toLowerCase(); //Se recoge la respuesta del usuario y se pasa a minúscula
-                if(siNo.equals("n")){ //Condicional para saber si el usuario se ha negado a continuar
-                    salir = true; //La variable se vuelve verdadera para que el bucle deje de ejecutarse
-                    System.out.println("Hasta la próxima!");
-                    sc.close(); //Se cierra el Scanner
+                System.out.println("Deseas continuar operando? s/n");
+                siNo = sc.next().toLowerCase(); //Se recoge la respuesta del usuario y se pasa a minúscula
+                while (!(siNo.equals("s")) && !(siNo.equals("n"))) { // Bucle que verifica que el usuario ha introducido correctamente una respuesta
+                    System.out.println("Perdona, no te he entendido, puedes repetir? (Introduce 's' o 'n')");
+                    siNo = sc.next(); //En caso de no haber respuesto correctamente, se le vuelve a pedir que introducia una respuesta
+                }
+                if (siNo.equals("n")) { //En caso de que sea no, se sale del bucle mediante volviendo verdadera la variable de salir
+                    salir = true;
                 }
             }
         }  
