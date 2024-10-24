@@ -18,17 +18,16 @@ public class Main {
             }
         }
         for (int i = 0; i < numeros.length; i++) {
-            sumaTotal = sumaTotal + numeros[i];
+            sumaTotal += numeros[i];
         }
         media = sumaTotal / numeros.length;
-
         System.out.println("El valor máximo del array es: " + valorMaximo);
         System.out.println("El valor mínimo del array es: " + valorMinimo);
         System.out.println("La suma total del array es de: " + sumaTotal);
         System.out.println("La media del array es de: " + media);
         System.out.println("El array de forma invertida es el siguiente: ");
         for (int i = numeros.length - 1; i >= 0; i--) {
-            System.out.println(numeros[i]);
+            System.out.printf(numeros[i] + " " );
         }
     }
 }
