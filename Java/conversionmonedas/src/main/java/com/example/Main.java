@@ -11,11 +11,12 @@ public class Main {
                 "11. Pesos mexicanos a Yenes", "12. Pesos mexicanos a Libras", "13. Yenes a Dólares",
                 "14. Yenes a Euros", "15. Yenes a Pesos Mexicanos", "16. Yenes a Libras", "17. Libras a Dólares",
                 "18. Libras a Euros", "19. Libras a Pesos mexicanos", "20. Libras a Yenes", "21. Salir" }; //Array con todas las opciones disponibles
-        String[] monedaAConvertirAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" };
-        String[] monedaConvertidaAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" };
-        String siNo = "s";
-        int opcionMenu = 0;
-        int monedaConvertida = 0;
+        String[] monedaAConvertirAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" }; //Array con todas las abreviaciones de monedas
+        String[] monedaConvertidaAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" }; //Aray con todas las abreviaciones de monedas
+        Double [] conversionMonedas = {0.85, 20.0, 150.75, 0.77, 1.18, 23.5, 163.07, 0.83, 0.05, 0.042, 7.6, 0.039, 0.0066, 0.0061, 0.13, 0.01, 1.3, 1.2, 25.7, 196.0 }; //variables donde se guardan las conversiones de cada moneda
+        String siNo = "s"; //Variable donde el usuario introducirá "s" o "n" para decidir si quiere salir del bucle
+        int opcionMenu = 0; //Variable donde se escoge la opción del menú
+        int monedaConvertida = 0; //
         int monedaAConvertir = 0;
         boolean salir = false;
         double cantidadAConvertir = 0.0d;
@@ -37,101 +38,101 @@ public class Main {
             }
             switch (opcionMenu) {
                 case (0):
-                    cantidadConvertida = cantidadAConvertir * 0.85;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 0; // USD
                     monedaConvertida = 1; // EUR
                     break;
                 case (1):
-                    cantidadConvertida = cantidadAConvertir * 20;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 0; // USD
                     monedaConvertida = 2; // MXN
                     break;
                 case (2):
-                    cantidadConvertida = cantidadAConvertir * 150.75;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 0; // USD
                     monedaConvertida = 3; // JPY
                     break;
                 case (3):
-                    cantidadConvertida = cantidadAConvertir * 0.77;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 0; // USD
                     monedaConvertida = 4; // GBP
                     break;
                 case (4):
-                    cantidadConvertida = cantidadAConvertir * 1.18;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 1; // EUR
                     monedaConvertida = 0; // USD
                     break;
                 case (5):
-                    cantidadConvertida = cantidadAConvertir * 23.50;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 1; // EUR
                     monedaConvertida = 2; // MXN
                     break;
                 case (6):
-                    cantidadConvertida = cantidadAConvertir * 163.07;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 1; // EUR
                     monedaConvertida = 3; // JPY
                     break;
                 case (7):
-                    cantidadConvertida = cantidadAConvertir * 0.83;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 1; // EUR
                     monedaConvertida = 4; // GBP
                     break;
                 case (8):
-                    cantidadConvertida = cantidadAConvertir * 0.05;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 2; // MXN
                     monedaConvertida = 0; // USD
                     break;
                 case (9):
-                    cantidadConvertida = cantidadAConvertir * 0.042;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 2; // MXN
                     monedaConvertida = 1; // EUR
                     break;
                 case (10):
-                    cantidadConvertida = cantidadAConvertir * 7.60;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 2; // MXN
                     monedaConvertida = 3; // JPY
                     break;
                 case (11):
-                    cantidadConvertida = cantidadAConvertir * 0.039;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 2; // MXN
                     monedaConvertida = 4; // GBP
                     break;
                 case (12):
-                    cantidadConvertida = cantidadAConvertir * 0.0066;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 3; // JPY
                     monedaConvertida = 0; // Dólar
                     break;
                 case (13):
-                    cantidadConvertida = cantidadAConvertir * 0.0061;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 3; // JPY
                     monedaConvertida = 1; // EUR
                     break;
                 case (14):
-                    cantidadConvertida = cantidadAConvertir * 0.13;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 3; // JPY
                     monedaConvertida = 2; // MXN
                     break;
                 case (15):
-                    cantidadConvertida = cantidadAConvertir * 0.01;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 3; // JPY
                     monedaConvertida = 4; // GBP
                     break;
                 case (16):
-                    cantidadConvertida = cantidadAConvertir * 1.3;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 4; // GBP
                     monedaConvertida = 0; // USD
                     break;
                 case (17):
-                    cantidadConvertida = cantidadAConvertir * 1.2;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 4; // GBP
                     monedaConvertida = 1; // EUR
                     break;
                 case (18):
-                    cantidadConvertida = cantidadAConvertir * 25.7;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 4; // GBP
                     monedaConvertida = 2; // MXN
                 case (19):
-                    cantidadConvertida = cantidadAConvertir * 196;
+                    cantidadConvertida = cantidadAConvertir * conversionMonedas[opcionMenu];
                     monedaAConvertir = 4; // GBP
                     monedaConvertida = 3; // JPY
                 case (20):
