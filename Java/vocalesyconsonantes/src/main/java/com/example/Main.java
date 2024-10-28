@@ -10,7 +10,7 @@ public class Main {
         System.out.println("Introduce una frase");
         fraseIntroducida = sc.next();
         fraseIntroducida = fraseIntroducida.toLowerCase();
-        char[] letras = fraseIntroducida.toCharArray();      
+        char[] letras = fraseIntroducida.toCharArray();     
         for(int i = 0; i<fraseIntroducida.length(); i++){
             switch(letras[i]){
                 case('a'):
