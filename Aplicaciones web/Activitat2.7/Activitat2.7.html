@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="MisEstilos.css" rel="STYLESHEET">
+        <title>Activitat2.7</title>
+    </head>
+    <body>
+        <header>
+            <h1>
+                Formulario
+            </h1>
+            <p id="introduccion">
+                Introdueix les teves dades per continuar amb el registre
+            </p>
+        </header>
+        <main class="clasemain">
+            <form>
+                <fieldset>
+                    <legend>Datos personales</legend>
+                    <div>
+                        <label for="Nombre">Nombre</label> 
+                        <input type="text" name="Nombre" placeholder="Nombre" required>
+                    </div>
+                    <div>
+                        <label for="Edad">Edad</label> 
+                        <input type="number" name="Edad" placeholder="Edad" maxlength="3" minlength="2" min="18">
+                    </div>
+                    <div>
+                        <label for="Correo">Correo electrónico</label> 
+                        <input type="email" name="Correo" placeholder="Correo electrónico" required>
+                    </div>
+                    <div>
+                        <label for="Contraseña">Contraseña</label> 
+                        <input type="password" name="Contraseña" placeholder="Contraseña" minlength="6" maxlength="12" required>
+                    </div>
+                </fieldset>
+                <div>
+                    <label for="Consola">
+                        Consola favorita:
+                    </label>
+                    <Select name="Consola" multiple required>
+                        <option value="Nintendo switch">Nintendo switch</option>
+                        <option value="PS5">PS5</option>
+                        <option value="Xbox Series S">Xbox Series S</option>
+                        <option value="Xbox Series X">Xbox Series X</option>
+                        <option value="Steam Deck">Steam Deck</option>
+                        <option value="Otros">Otros</option>
+                    </Select>
+                </div>
+                <div>
+                    <label for="newsletter">Deseo subscribirme a la newsletter y recibir ofertas a través de correo electrónico</label>
+                    <input type="checkbox" name="newsletter">
+                </div>
+                <div id="comentarios">
+                    <label for="Comentarios">Comentarios</label>
+                    <textarea name="Comentarios" cols="50" rows="7" placeholder="Comentarios"></textarea>
+                </div>
+                <div><button type="submit" name="Enviar" placeholder="Enviar">Enviar</button></div>
+            </form>
+        </main>
+        <footer>
+            <p>
+                La meva pàgina de Videojocs. Tots el drets reservats.
+            </p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(MisFuentes/Roboto/Roboto-Regular.ttf);
+}
+*{
+   font-family: "Roboto", Verdana, sans-serif;
+}
+body{
+    background-color: #EFEFF0;
+}
+label{
+    color: #696969;
+}
+input{
+    width: 200px;
+}
+div{
+    margin: 5px;
+}
+.clasemain{
+    background-color: #B0F3F8;
+}
+#comentarios{
+    background-color: lightpink;
+}
+#introduccion{
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    background: linear-gradient(to right, lightpink, aquamarine);
+}
+[min]{
+    background-color: lightgoldenrodyellow; 
+}
+select[required]{
+    background-color: aquamarine;
+    height: 110px;
+}
+input[type="text"]{
+    background-color: mistyrose;
+}
+[type="submit"]{
+    background-color: navy;
+    color: white;
+}
