@@ -44,9 +44,13 @@ public class Main {
                             encontrado = true;
                         }
                     }
+                    if(!encontrado){
+                        System.out.println("El producto no se ha encontrado!");
+                    }
                     break;
                 case 3:
-
+                    System.out.println("Qué producto deseas modificar el stock?");
+                    busquedaProducto = sc.next().toLowerCase();
                     break;
                 default:
                     System.out.println("Has introducido una opción no valida! Vuelve a intentarlo");
