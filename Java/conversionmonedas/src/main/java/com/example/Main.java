@@ -3,6 +3,7 @@ package com.example;
 import java.util.Scanner;
 
 public class Main {
+    private static final Double [] conversionMonedas = {0.85, 20.0, 150.75, 0.77, 1.18, 23.5, 163.07, 0.83, 0.05, 0.042, 7.6, 0.039, 0.0066, 0.0061, 0.13, 0.01, 1.3, 1.2, 25.7, 196.0 }; //variables donde se guardan las conversiones de cada moneda
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] menuConversiones = { "1. Dólares a Euros", "2. Dólares a Pesos mexicanos", "3. Dólares a Yenes",
@@ -11,16 +12,16 @@ public class Main {
                 "11. Pesos mexicanos a Yenes", "12. Pesos mexicanos a Libras", "13. Yenes a Dólares",
                 "14. Yenes a Euros", "15. Yenes a Pesos Mexicanos", "16. Yenes a Libras", "17. Libras a Dólares",
                 "18. Libras a Euros", "19. Libras a Pesos mexicanos", "20. Libras a Yenes", "21. Salir" }; //Array con todas las opciones disponibles
-        String[] monedaAConvertirAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" }; //Array con todas las abreviaciones de monedas
-        String[] monedaConvertidaAbreviada = { " USD", " EUR", " MXN", "JPY", "GBP" }; //Aray con todas las abreviaciones de monedas
-        Double [] conversionMonedas = {0.85, 20.0, 150.75, 0.77, 1.18, 23.5, 163.07, 0.83, 0.05, 0.042, 7.6, 0.039, 0.0066, 0.0061, 0.13, 0.01, 1.3, 1.2, 25.7, 196.0 }; //variables donde se guardan las conversiones de cada moneda
+        String[] monedaAConvertirAbreviada = { " USD", " EUR", " MXN", " JPY", " GBP" }; //Array con todas las abreviaciones de monedas
+        String[] monedaConvertidaAbreviada = { " USD", " EUR", " MXN", " JPY", " GBP" }; //Aray con todas las abreviaciones de monedas
+        
         String siNo = "s"; //Variable donde el usuario introducirá "s" o "n" para decidir si quiere salir del bucle
         int opcionMenu = 0; //Variable donde se escoge la opción del menú
         int monedaConvertida = 0; //
         int monedaAConvertir = 0;
         boolean salir = false;
         double cantidadAConvertir = 0.0d;
-        double cantidadConvertida = 0.0d;
+        double cantidadConvertida = 0.0d;  
         do {
             System.out.println("Elige de las siguientes opciones:");
             for( int i = 0; i < menuConversiones.length; i++){

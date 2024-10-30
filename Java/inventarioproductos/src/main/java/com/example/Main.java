@@ -15,15 +15,15 @@ public class Main {
         int stockProductos[] = new int[numeroProductos];
         String nombreProductos[] = new String[numeroProductos];
         double precioProductos[] = new double[numeroProductos];
-        for (int i = 0; i<numeroProductos; i++){
+        for (int i = 0; i < numeroProductos; i++) {
             System.out.println("Introduce el nombre del producto");
             nombreProductos[i] = sc.next().toLowerCase();
             System.out.println("Introduce su precio:");
             precioProductos[i] = sc.nextDouble();
             System.out.println("Introduce el stock disponible:");
-            stockProductos[i] = sc.nextInt(); 
+            stockProductos[i] = sc.nextInt();
         }
-        do{
+        do {
             System.out.println("Escoge una de las siguientes opciones:");
             System.out.println("1. Mostrar inventario");
             System.out.println("2. Buscar un producto");
@@ -31,33 +31,44 @@ public class Main {
             opcionMenu = sc.nextInt();
             switch (opcionMenu) {
                 case 1:
-                    for(int i = 0; i<numeroProductos; i++){
-                        System.out.println(nombreProductos[i] + " " + precioProductos[i] + " " + stockProductos[i]);
+                    System.out.println("Nombre  Precio  Stock" );
+                    for (int i = 0; i < numeroProductos; i++) {                    
+                        System.out.println(nombreProductos[i] + "   " + precioProductos[i] + "  " + stockProductos[i]);
                     }
                     break;
                 case 2:
+                    encontrado = false;
                     System.out.println("Introduce el nombre del producto");
                     busquedaProducto = sc.next().toLowerCase();
-                    for(int i = 0; i<nombreProductos.length && !encontrado; i++){
-                        if (nombreProductos[i].equals(busquedaProducto)){
-                            System.out.println(nombreProductos[i]+ " " + precioProductos[i] + " " + stockProductos[i]);
+                    for (int i = 0; i < nombreProductos.length && !encontrado; i++) {
+                        if (nombreProductos[i].equals(busquedaProducto)) {
+                            System.out.println(nombreProductos[i] + "   " + precioProductos[i] + "    " + stockProductos[i]);
                             encontrado = true;
                         }
                     }
-                    if(!encontrado){
+                    if (!encontrado) {
                         System.out.println("El producto no se ha encontrado!");
                     }
                     break;
                 case 3:
-                    System.out.println("Qué producto deseas modificar el stock?");
+                    encontrado = false;
+                    System.out.println("Qué producto deseas modificar su stock?");
                     busquedaProducto = sc.next().toLowerCase();
+                    for(int i = 0; i<nombreProductos.length && !encontrado; i++){
+                        if(nombreProductos[i].equals(busquedaProducto)){
+                            System.out.println("El producto " + nombreProductos[i] + " tiene un stock de " + stockProductos[i]);
+                            System.out.println("Introduce el stock del producto actual");
+                            stockProductos[i] = sc.nextInt();
+                            System.out.println("El stock actual de " + nombreProductos[i] + " es de " + stockProductos[i]);
+                            encontrado = true;
+                        }
+                    }
                     break;
                 default:
                     System.out.println("Has introducido una opción no valida! Vuelve a intentarlo");
             }
-        }
-         while(!salir);   
-        
+        } while (!salir);
+        System.out.println("Hasta luego!");
         sc.close();
     }
 }
