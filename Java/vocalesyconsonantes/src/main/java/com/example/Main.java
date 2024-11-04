@@ -23,7 +23,7 @@ public class Main {
                 break;
                 case('\u0020'):
                     totalEspacios++;
-                    System.out.println(letras[i] + " es un espacio");
+                    System.out.println("'" + letras[i] + "' es un espacio");
                     break;
                 default:
                     System.out.println("la letra " + letras[i] + " es consonante");
