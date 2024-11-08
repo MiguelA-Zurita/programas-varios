@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int seleccionCanal = 0;
-        int canalSalon = 0;
-        int volumenSalon = 0;
+        int seleccionCanal = 0; // Variable para seleccionar el canal
+        int canalSalon = 0; // Variable para almacenar el canal del salon
+        int volumenSalon = 0; // Variable para almacenar el volumen del salon
         int canalHabitacion = 0;
         int volumenHabitacion = 0;
         TV televisionSalon = new TV();
