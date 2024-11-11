@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int seleccionCanal = 0; // Variable para seleccionar el canal
-        int canalSalon = 0; // Variable para almacenar el canal del salon
         int volumenSalon = 0; // Variable para almacenar el volumen del salon
-        int canalHabitacion = 0;
         int volumenHabitacion = 0;
         double velocidadPatinete = 0;
         TV televisionSalon = new TV();
@@ -27,7 +25,6 @@ public class Main {
         System.out.println(volumenHabitacion);
         volumenHabitacion = televisionHabitacion.getVolumen();
         volumenSalon = televisionSalon.getVolumen();
-        canalHabitacion = televisionHabitacion.getCanal();
         if(volumenHabitacion > volumenSalon){
             System.out.println("La habitación tiene mayor volumen");
         }
