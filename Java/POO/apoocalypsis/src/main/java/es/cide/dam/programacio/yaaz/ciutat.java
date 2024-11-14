@@ -4,14 +4,17 @@ public class Ciutat {
     
     private String nom;
     private int tamany;
-    private Zombie zombies[];
+    private Zombie ruta[];
 
-    public Ciutat(){
-        this.nom = "Albacete";
-        this.tamany = 5;
+    public Ciutat(String nom, int tamany){
+        this.nom = nom;
+        this.tamany = tamany;
+        this.ruta = new Zombie[this.tamany];
         for (int i = 0; i < this.tamany; i++){
-            this.zombies[i] = new Zombie();
+            this.ruta[i] = new Zombie();
+            System.out.println("Zombie " + i + " creat");
         }
+        System.out.println("Ciutat " + nom + " creada");
     }
 
     public String getNom() {
@@ -20,6 +23,7 @@ public class Ciutat {
 
     public void setNom(String nom) {
         this.nom = nom;
+        System.out.println("Nom de la ciutat canviat a " + nom);
     }
 
     public int getTamany() {
@@ -28,9 +32,10 @@ public class Ciutat {
     
     public void setTamany(int tamany) {
         this.tamany = tamany;
+        System.out.println("Tamany de la ciutat canviat a " + tamany);
     }
 
-    public int getZombies() {
-        return zombies.length;
+    public Zombie posicioRuta(int posicio) {
+        return this.ruta[posicio];
     }
 }

@@ -13,26 +13,27 @@ public class Zombie {
         this.salut = 20;
         this.ataque = 5;
         this.defensa = 5;
+        System.out.println("Zombie creado");
     }
 
     public int getSalut() {
         return salut;
     }
 
-    public void setSalut(int salut) {
-        this.salut = salut;
-    }
-
     public int getAtaque() {
         return ataque;
     }
 
-    public void setAtaque(int ataque) {
-        this.ataque = ataque;
-    }
-
     public int getDefensa() {
         return defensa;
+    }
+    
+    public void setSalut(int salut) {
+        this.salut = salut;
+    }
+
+    public void setAtaque(int ataque) {
+        this.ataque = ataque;
     }
 
     public void setDefensa(int defensa) {
