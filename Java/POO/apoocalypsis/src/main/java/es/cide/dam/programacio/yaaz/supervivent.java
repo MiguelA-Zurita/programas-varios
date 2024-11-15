@@ -1,67 +1,76 @@
+/*
+ * Nom: Miguel Angel Zurita Redwood
+ * Data: 15/11/2024
+ * 
+ */
+
 package es.cide.dam.programacio.yaaz;
 
 import java.util.Random;
 
-public class Supervivent {
-     
-    private int salut;
-    private int atac;    
+public class Supervivent { // Clase superviviente
+
+    private int salut; // Atributos de la clase superviviente
+    private int ataque;
     private int defensa;
     private String nom;
-    private Random random = new Random();
 
-    public Supervivent(String nom){
-        
-        this.atac = 10;
+    public Supervivent(String nom) { // Constructor de la clase superviviente
+
+        this.ataque = 10;
         this.salut = 100;
         this.defensa = 10;
         this.nom = nom;
         System.out.println("Superviviente " + nom + " creado");
     }
 
-    public int getSalut() {
+    public int getSalut() { // Método que devuelve la salud del superviviente
         return this.salut;
     }
 
-    public int getAtac() {
-        return atac;
+    public int getAtaque() { // Método que devuelve el ataque del superviviente
+        return ataque;
     }
 
-    public int getDefensa() {
+    public int getDefensa() { // Método que devuelve la defensa del superviviente
         return defensa;
     }
 
-    public String getNom() {
+    public String getNom() { // Método que devuelve el nombre del superviviente
         return nom;
     }
 
-    public void setSalut(int salut) {
+    public void setSalut(int salut) { // Método que cambia la salud del superviviente
         this.salut = salut;
         System.out.println("Salud del superviviente cambiada a " + salut);
     }
 
-    public void setAtac(int atac) {
-        this.atac = atac;
-        System.out.println("Ataque del superviviente cambiado a " + atac);
+    public void setAtaque(int ataque) { // Método que cambia el ataque del superviviente
+        this.ataque = ataque;
+        System.out.println("Ataque del superviviente cambiado a " + ataque);
     }
 
-    public void setDefensa(int defensa) {
+    public void setDefensa(int defensa) { // Método que cambia la defensa del superviviente
         this.defensa = defensa;
         System.out.println("Defensa del superviviente cambiada a " + defensa);
     }
 
-    public void setNom(String nom) {
+    public void setNom(String nom) { // Método que cambia el nombre del superviviente
         this.nom = nom;
         System.out.println("Nombre del superviviente cambiado a " + nom);
     }
 
-    public void ataca(Zombie zombie){
-        int atac = random.nextInt(0,this.atac);
+    public int ataca() { // Método que simula el ataque del superviviente
+        Random random = new Random(); // Creación de un objeto de la clase Random
+        int ataque = random.nextInt(0, this.ataque); // Generación de ataque entre un número aleatorio entre 0 y el ataque del superviviente
+        System.out.println("El ataque de " + this.nom + " ha sido de " + ataque);
+        return ataque;
     }
 
-    public void defensat(Zombie zombie){
-        int defensa = random.nextInt(0,this.defensa);
-        this.setSalut(defensa - zombie.getAtaque());
-        System.out.println("La salud restante del superviviente es: " + this.getSalut());
+    public int defensat() { // Método que simula la defensa del superviviente
+        Random random = new Random(); // Creación de un objeto de la clase Random
+        int defensa = random.nextInt(0, this.defensa); // Generación de ataque un número aleatorio entre 0 y la defensa del superviviente
+        System.out.println("La defensa de " + this.nom + " ha sido de " + defensa);
+        return defensa;
     }
 }
