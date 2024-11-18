@@ -8,14 +8,14 @@ package es.cide.dam.programacio.yaaz;
 
 import java.util.Random;
 
-public class Supervivent { // Clase superviviente
+public class supervivent { // Clase superviviente
 
     private int salut; // Atributos de la clase superviviente
     private int ataque;
     private int defensa;
     private String nom;
 
-    public Supervivent(String nom) { // Constructor de la clase superviviente
+    public supervivent(String nom) { // Constructor de la clase superviviente
 
         this.ataque = 10;
         this.salut = 100;
