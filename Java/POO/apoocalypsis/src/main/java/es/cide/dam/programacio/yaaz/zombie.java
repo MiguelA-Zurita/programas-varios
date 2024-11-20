@@ -9,7 +9,6 @@ package es.cide.dam.programacio.yaaz;
 import java.util.Random;
 
 public class zombie { // Clase zombie
-
     private int salut; // Atributos de la clase zombie
     private int ataque;
     private int defensa;

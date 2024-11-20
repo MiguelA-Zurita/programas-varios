@@ -23,8 +23,8 @@ public class Main {
         zombie zombieRandom = albacete.posicioRuta(0);
         while (sup.getSalut() > 0 && zombieRandom.getSalut() > 0) {
             System.out.println("Zombie en la posición 0 de la ruta de " + nomDeLaCiutat + zombieRandom.getSalut() + " de salud");
-            sup.ataca();
-            zombieRandom.ataca();
+            zombieRandom.setSalut(sup.ataca()-zombieRandom.defensat());
+            sup.setSalut(sup.getSalut-(zombieRandom.ataca()-sup.getDefensa()));
         }
         
         sc.close();
