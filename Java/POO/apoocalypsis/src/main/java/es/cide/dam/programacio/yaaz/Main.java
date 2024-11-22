@@ -27,7 +27,7 @@ public class Main {
             zombie zombieRandom = albacete.posicioRuta(i);
             System.out.println("Hay un zombie en la posición " + i + " de la ruta de " + nomDeLaCiutat + " con " + zombieRandom.getSalut() + " de salud");
             turno = 1;
-            while (sup.getSalut() > 0 && zombieRandom.getSalut() > 0) {
+            while (sup.getSalut() > 0 && zombieRandom.getSalut() > 0) { 
                 System.out.println("Turno " + turno);
                 System.out.println("Salud restante del zombie: " + zombieRandom.getSalut());
                 System.out.println("Salud restante de " + sup.getNom() + ": " + sup.getSalut());
