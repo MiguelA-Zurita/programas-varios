@@ -14,9 +14,10 @@ html, body {
 header {
     background-color: #041adb;
     color: #ffffff;
-    padding: 10px;
     text-align: center;
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*Estilos de navegación */
@@ -24,7 +25,7 @@ nav {
     position: absolute;
     width: 15%;
     background-color: #4c5eff;
-    height: 100vh;
+    height: 100%;
 }
 
 nav ul {
@@ -36,35 +37,39 @@ nav ul li {
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
 }
-
+/* Estilos de body */
 main {
     position: relative;
     left: 15%;
     width: 85%;
-    height: 100%;
+    min-height: inherit;
+    height: inherit;
     background: #ffffff;
 }
 
 footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
     position: fixed;
     bottom: 0;
-    padding: 10px;
     background-color: #333333;
     color: #ffffff;
     text-align: center;
 }
 .catalogo{
     width: 100%;
-    height: 100%;
+    height: inherit;
+    min-height: inherit;
     background-color: rgb(98, 178, 252);
-    padding: 10px;
+    overflow: auto;
 }
 
 .producto{
@@ -74,14 +79,43 @@ footer {
     border: 1px solid #333333;
     padding: 10px;
     border-radius:5px;
-    margin: 10px;
+    margin: 20px;
     align-content: center;
     text-align: center;
-    width: 200px;
-    height: 350px;
+    width: 300px;
+    height: 550px;
 }
 
 .producto img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+}
+
+.producto h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #333333;
+    font-size: 20pt;
+}
+
+.catalogo > h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 40pt;
+}
+
+
+h2, h3{
+    margin: 0px;
+    padding: 20px;
+    font-size: 14pt;
+}
+
+p{
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16pt;
 }
