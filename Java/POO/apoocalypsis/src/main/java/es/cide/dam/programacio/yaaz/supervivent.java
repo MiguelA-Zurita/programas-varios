@@ -63,7 +63,7 @@ public class supervivent { // Clase superviviente
     public int ataca() { // Método que simula el ataque del superviviente
         Random random = new Random(); // Creación de un objeto de la clase Random
         int ataque = random.nextInt(0, this.ataque); // Generación de ataque entre un número aleatorio entre 0 y el ataque del superviviente
-        System.out.println("El ataque de " + this.nom + " ha sido de " + ataque);
+        System.out.println("La fuerza de " + this.nom + " ha sido de " + ataque);
         return ataque;
     }
 

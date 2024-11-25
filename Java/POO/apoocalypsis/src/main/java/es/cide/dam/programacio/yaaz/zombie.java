@@ -34,20 +34,23 @@ public class zombie { // Clase zombie
 
     public void setSalut(int salut) { // Método que cambia la salud del zombie
         this.salut = salut;
+        System.out.println("Salud del zombie cambiada a " + salut);
     }
 
     public void setAtaque(int ataque) { // Método que cambia el ataque del zombie
         this.ataque = ataque;
+        System.out.println("Ataque del zombie cambiado a " + ataque);
     }
 
     public void setDefensa(int defensa) { // Método que cambia la defensa del zombie
         this.defensa = defensa;
+        System.out.println("Defensa del zombie cambiada a " + defensa);
     }
 
     public int ataca() { // Método que simula el ataque del zombie
         Random random = new Random(); // Creación de un objeto de la clase Random
         int ataque = random.nextInt(0, this.ataque); // Generación de ataque entre un número aleatorio entre 0 y el ataque del zombie
-        System.out.println("El ataque del zombie ha sido de " + ataque); 
+        System.out.println("La fuerza del zombie ha sido de " + ataque); 
         return ataque;
     }
 

@@ -20,7 +20,7 @@ public class ciutat { // Clase ciutat
         this.ruta = new zombie[this.tamany]; // Creación de un array de zombies con el tamaño de la ciudad
         for (int i = 0; i < this.tamany; i++) { // Bucle que crea un zombie en cada posición de la ruta
             this.ruta[i] = new zombie(); // Creación de un zombie
-            System.out.println("Zombie " + i + " creat");
+            System.out.println("Zombie " + i + " creado");
         }
         System.out.println("Ciutat " + this.nom + " creada");
     }

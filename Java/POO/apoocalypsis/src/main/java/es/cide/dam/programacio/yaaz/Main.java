@@ -17,17 +17,17 @@ public class Main {
         System.out.println("Creando superviviente...");
         System.out.println("Introduce el nombre del superviviente:");
         nomDelSupervivent = sc.nextLine();
-        supervivent sup = new supervivent(nomDelSupervivent);
         System.out.println("Creando ciudad...");
         System.out.println("Introduce el nombre de la ciudad:");
         nomDeLaCiutat = sc.nextLine();
         tamanyDeLaCiutat = rand.nextInt(10, 20);
+        supervivent sup = new supervivent(nomDelSupervivent);
         ciutat albacete = new ciutat(nomDeLaCiutat, tamanyDeLaCiutat);
         for (int i = 0; i < albacete.getTamany(); i++) {
             zombie zombieRandom = albacete.posicioRuta(i);
             System.out.println("Hay un zombie en la posición " + i + " de la ruta de " + nomDeLaCiutat + " con " + zombieRandom.getSalut() + " de salud");
             turno = 1;
-            while (sup.getSalut() > 0 && zombieRandom.getSalut() > 0) {
+            while (sup.getSalut() > 0 && zombieRandom.getSalut() > 0) { 
                 System.out.println("Turno " + turno);
                 System.out.println("Salud restante del zombie: " + zombieRandom.getSalut());
                 System.out.println("Salud restante de " + sup.getNom() + ": " + sup.getSalut());
@@ -39,8 +39,8 @@ public class Main {
                 }
 
                 else {
-                    zombieRandom.setSalut(zombieRandom.getSalut() - (ataque - defensa));
                     System.out.println("El ataque de " + sup.getNom() + " ha sido de " + (ataque - defensa));
+                    zombieRandom.setSalut(zombieRandom.getSalut() - (ataque - defensa));
                 }
                 
                 if(zombieRandom.getSalut() <= 0){
@@ -56,8 +56,8 @@ public class Main {
                     }
 
                     else {
-                        sup.setSalut(sup.getSalut() - (ataque - defensa));
                         System.out.println("El ataque del zombie ha sido de " + (ataque - defensa));
+                        sup.setSalut(sup.getSalut() - (ataque - defensa));
                     }
 
                     if (sup.getSalut() <= 0) {
@@ -69,7 +69,7 @@ public class Main {
             }
         }
         System.out.println("La ciudad ha sido limpiada de zombies");
-
+        System.out.println("Has llegado al refugio de supervivientes");
         sc.close();
     }
 }
