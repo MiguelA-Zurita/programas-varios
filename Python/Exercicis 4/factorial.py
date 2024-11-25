@@ -10,10 +10,10 @@ def factioral(x):
     """
     if x == 1 or x == 0:
         return 1
-    result = x - factioral(x - 1)
+    result = x * factioral(x - 1)
     return result
 
-num = input("Enter a number to calculate it factorial: ")
+num = int(input("Enter a number to calculate it factorial: "))
 
 fact = factioral(num)
 
