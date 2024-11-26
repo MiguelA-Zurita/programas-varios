@@ -19,7 +19,6 @@
 #divCentral{
     position: absolute;
     clear: both;
-    float: center;
     width: 35%;
     text-align: right;
     bottom: 50%;
@@ -28,9 +27,8 @@
 
 footer{
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
     width: 100%;
     text-align: center;
     background-color: #868484;
