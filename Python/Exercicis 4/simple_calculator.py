@@ -20,10 +20,13 @@ def show_menu():
 def calculator():
     show_menu()
 
-    number1 = input("Enter a number to calculate: ")
-    number2 = input("Enter a number to calculate: ")
+    option = int(input("Enter an option: "))
+    if option == 5:
+        return True
+    number1 = int(input("Enter a number to calculate: "))
+    number2 = int(input("Enter a number to calculate: "))
 
-    option = ("Enter a opction: ")
+    
 
     if option == 1:
         print(add(number1, number2))
