@@ -1,6 +1,6 @@
 /*
  * Nom: Miguel Angel Zurita Redwood
- * Data: 27/11/2024
+ * Data: 28/11/2024
  */
 
 package es.cide.dam.programacio.yaaz;
