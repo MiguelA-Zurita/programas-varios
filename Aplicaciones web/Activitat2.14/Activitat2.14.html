@@ -9,7 +9,7 @@
     </head>
     <body>
         <header>
-            <img src="img/logo.png" alt="Logo">
+            <img src="img/logo.png" alt="Logo" class="icono">
             <h1>The Company company</h1>
             <nav>
                 <ul>
@@ -35,13 +35,21 @@
             </section>
             <section>
                 <h2>Contact us</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc nec</p>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="10" cols="80" required></textarea>
+                    <input type="submit" value="Send">
+                </form>
             </section>
         </main>
         <footer>
             <ul>
                 <h3> The Company company</h3>
-                <li><img src="img/logo.png" alt="logo"></li>
+                <li><img src="img/logo.png" alt="logo" class="icono"></li>
             </ul>
             <ul>
                 <h3>Navigation</h3>
