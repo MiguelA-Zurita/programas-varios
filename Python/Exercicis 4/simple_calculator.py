@@ -2,13 +2,13 @@ def add(number1, number2):
     return number1 + number2
 
 def subtract(number1, number2):
-    return number2 - number1
+    return number1 - number2
 
 def multiplication(number1, number2):
-    return number1 * number1
+    return number1 * number2
 
 def division(number1, number2):
-    return number2 / number1
+    return number1 / number2
 
 def show_menu():
     print("1. Add")
@@ -40,12 +40,11 @@ def calculator():
     elif option == 4:
         print(division(number1, number2))
         return False
-    else:
-        return True
 
 def run():
     exit = False
     while not exit:
         exit = calculator()
 
-run()
+if __name__ == "__main__":
+    run()
